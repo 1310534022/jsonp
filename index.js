@@ -83,7 +83,7 @@ function jsonp(url, opts, fn){
   };
 
   // add qs component
-  url += (~url.indexOf('?') ? '&' : '?') + param + '=' + enc(id);
+  url += (url.indexOf('?') ? '&' : '?') + param + '=' + enc(id);
   url = url.replace('?&', '?');
 
   debug('jsonp req "%s"', url);
